@@ -1,0 +1,180 @@
+<mxfile host="app.diagrams.net" modified="2026-07-07T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram name="SIPERU Class Diagram" id="siperu-class-diagram">
+    <mxGraphModel dx="2200" dy="1400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2200" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="baseModel" value="&lt;b&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;br&gt;BaseModel&lt;/b&gt;&lt;hr&gt;+ to_dict(): dict&lt;br&gt;+ from_dict(data: dict)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="930" y="40" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="libraryResource" value="&lt;b&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;br&gt;LibraryResource&lt;/b&gt;&lt;hr&gt;+ kode_resource: str&lt;br&gt;+ nama_resource: str&lt;br&gt;+ tersedia(): bool&lt;br&gt;+ ringkasan_resource(): str&lt;br&gt;+ bersihkan_teks(value: str): str" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="40" width="300" height="150" as="geometry" />
+        </mxCell>
+
+        <mxCell id="user" value="&lt;b&gt;User&lt;/b&gt;&lt;hr&gt;- id_user: str&lt;br&gt;- nama: str&lt;br&gt;- username: str&lt;br&gt;- email: str&lt;br&gt;- password_hash: str&lt;br&gt;- role: str&lt;hr&gt;+ verify_password(password): bool&lt;br&gt;+ change_password(new_password): void&lt;br&gt;+ hash_password(password): str&lt;br&gt;+ dashboard_title(): str&lt;br&gt;+ logout(): bool" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="160" y="250" width="300" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="anggota" value="&lt;b&gt;Anggota&lt;/b&gt;&lt;hr&gt;- nim_nidn: str&lt;br&gt;- prodi: str&lt;br&gt;- no_telp: str&lt;br&gt;- status_aktif: bool&lt;br&gt;- kuota_pinjam: int&lt;hr&gt;+ dashboard_title(): str&lt;br&gt;+ to_dict(): dict" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="580" width="280" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="admin" value="&lt;b&gt;Admin&lt;/b&gt;&lt;hr&gt;- nip: str&lt;br&gt;- jabatan: str&lt;hr&gt;+ dashboard_title(): str&lt;br&gt;+ to_dict(): dict" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="380" y="600" width="240" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="kategoriBuku" value="&lt;b&gt;KategoriBuku&lt;/b&gt;&lt;hr&gt;+ id_kategori: str&lt;br&gt;+ nama_kategori: str&lt;hr&gt;+ to_dict(): dict&lt;br&gt;+ from_dict(data): KategoriBuku" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="700" y="250" width="280" height="135" as="geometry" />
+        </mxCell>
+        <mxCell id="buku" value="&lt;b&gt;Buku&lt;/b&gt;&lt;hr&gt;- id_buku: str&lt;br&gt;- judul: str&lt;br&gt;- penulis: str&lt;br&gt;- penerbit: str&lt;br&gt;- tahun_terbit: int&lt;br&gt;- stok: int&lt;br&gt;- kategori_id: str&lt;br&gt;- cover_buku: str&lt;br&gt;- link_pdf: str&lt;hr&gt;+ cek_stok(): bool&lt;br&gt;+ tersedia(): bool&lt;br&gt;+ bisa_dibaca_pdf(): bool&lt;br&gt;+ update_stok(perubahan): void&lt;br&gt;+ get_detail(): str" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="700" y="480" width="310" height="285" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ruangan" value="&lt;b&gt;Ruangan&lt;/b&gt;&lt;hr&gt;- id_ruangan: str&lt;br&gt;- nama_ruangan: str&lt;br&gt;- kapasitas: int&lt;br&gt;- lokasi: str&lt;br&gt;- fasilitas: str&lt;br&gt;- status_ruangan: str&lt;hr&gt;+ cek_ketersediaan(): bool&lt;br&gt;+ tersedia(): bool&lt;br&gt;+ update_status(status_baru): void&lt;br&gt;+ get_detail_ruangan(): str" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="1120" y="480" width="310" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="jadwalRuangan" value="&lt;b&gt;JadwalRuangan&lt;/b&gt;&lt;hr&gt;+ id_jadwal: str&lt;br&gt;+ id_ruangan: str&lt;br&gt;+ tanggal: str&lt;br&gt;+ jam_mulai: str&lt;br&gt;+ jam_selesai: str&lt;br&gt;+ status_jadwal: str&lt;hr&gt;+ cek_jadwal(): bool&lt;br&gt;+ to_dict(): dict" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="480" width="300" height="205" as="geometry" />
+        </mxCell>
+
+        <mxCell id="transaksiBase" value="&lt;b&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;br&gt;TransaksiBase&lt;/b&gt;&lt;hr&gt;+ ringkasan_transaksi(): str" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="930" y="840" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="peminjamanBuku" value="&lt;b&gt;PeminjamanBuku&lt;/b&gt;&lt;hr&gt;+ id_peminjaman_buku: str&lt;br&gt;+ id_buku: str&lt;br&gt;+ id_anggota: str&lt;br&gt;+ tanggal_pinjam: str&lt;br&gt;+ tanggal_kembali: str&lt;br&gt;+ status_peminjaman: str&lt;br&gt;+ denda: float&lt;br&gt;+ tanggal_dikembalikan: str&lt;hr&gt;+ buat_baru(...): PeminjamanBuku&lt;br&gt;+ validasi_peminjaman(): bool&lt;br&gt;+ sedang_dipinjam(): bool&lt;br&gt;+ proses_pengembalian(...): float&lt;br&gt;+ hitung_denda(...): float" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="520" y="1040" width="330" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="antrianBuku" value="&lt;b&gt;AntrianBuku&lt;/b&gt;&lt;hr&gt;+ id_antrian: str&lt;br&gt;+ id_buku: str&lt;br&gt;+ id_anggota: str&lt;br&gt;+ tanggal_daftar: str&lt;br&gt;+ urutan: int&lt;br&gt;+ status_antrian: str&lt;hr&gt;+ cek_urutan(): int&lt;br&gt;+ ringkasan_transaksi(): str" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="900" y="1040" width="300" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="reservasiRuangan" value="&lt;b&gt;ReservasiRuangan&lt;/b&gt;&lt;hr&gt;+ id_reservasi: str&lt;br&gt;+ id_ruangan: str&lt;br&gt;+ id_anggota: str&lt;br&gt;+ tanggal_reservasi: str&lt;br&gt;+ jam_mulai: str&lt;br&gt;+ jam_selesai: str&lt;br&gt;+ keperluan: str&lt;br&gt;+ status_reservasi: str&lt;hr&gt;+ konfirmasi_reservasi(): void&lt;br&gt;+ batalkan_reservasi(): void&lt;br&gt;+ ringkasan_transaksi(): str" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="1040" width="330" height="255" as="geometry" />
+        </mxCell>
+
+        <mxCell id="authService" value="&lt;b&gt;AuthService&lt;/b&gt;&lt;hr&gt;- user_storage: JsonStorage&lt;hr&gt;+ login(identifier, password): User&lt;br&gt;+ register_anggota(...): Anggota&lt;br&gt;+ list_users(): list&lt;br&gt;+ update_member(...): bool&lt;br&gt;+ update_profile(...): User" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="240" width="300" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="bukuService" value="&lt;b&gt;BukuService&lt;/b&gt;&lt;hr&gt;- book_storage: JsonStorage&lt;br&gt;- category_storage: JsonStorage&lt;hr&gt;+ list_books(): list&lt;br&gt;+ list_categories(): list&lt;br&gt;+ add_book(...): Buku&lt;br&gt;+ update_book(...): bool&lt;br&gt;+ delete_book(id): bool" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="460" width="300" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="ruanganService" value="&lt;b&gt;RuanganService&lt;/b&gt;&lt;hr&gt;- room_storage: JsonStorage&lt;hr&gt;+ list_rooms(): list&lt;br&gt;+ get_room(id): Ruangan&lt;br&gt;+ add_room(...): Ruangan&lt;br&gt;+ update_room(...): bool&lt;br&gt;+ delete_room(id): bool" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="690" width="300" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="peminjamanService" value="&lt;b&gt;PeminjamanService&lt;/b&gt;&lt;hr&gt;- book_storage: JsonStorage&lt;br&gt;- loan_storage: JsonStorage&lt;br&gt;- queue_storage: JsonStorage&lt;br&gt;- user_storage: JsonStorage&lt;hr&gt;+ pinjam_buku(...): tuple&lt;br&gt;+ kembalikan_buku(id): float&lt;br&gt;+ cancel_queue(...): bool" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="900" width="300" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="reservasiService" value="&lt;b&gt;ReservasiService&lt;/b&gt;&lt;hr&gt;- room_storage: JsonStorage&lt;br&gt;- reservation_storage: JsonStorage&lt;hr&gt;+ buat_reservasi(...): ReservasiRuangan&lt;br&gt;+ perpanjang_reservasi(...): ReservasiRuangan&lt;br&gt;+ update_status(...): bool&lt;br&gt;+ cancel_by_user(...): bool" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="1850" y="1140" width="300" height="195" as="geometry" />
+        </mxCell>
+
+        <mxCell id="reportService" value="&lt;b&gt;ReportService&lt;/b&gt;&lt;hr&gt;- user_storage: JsonStorage&lt;br&gt;- book_storage: JsonStorage&lt;br&gt;- room_storage: JsonStorage&lt;br&gt;- loan_storage: JsonStorage&lt;br&gt;- reservation_storage: JsonStorage&lt;br&gt;- queue_storage: JsonStorage&lt;hr&gt;+ summary(): dict&lt;br&gt;+ table_records(table_name): list&lt;br&gt;+ joined_loans(): list&lt;br&gt;+ joined_reservations(): list" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="900" width="330" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="jsonStorage" value="&lt;b&gt;JsonStorage&lt;/b&gt;&lt;hr&gt;- file_path: Path&lt;br&gt;- model_cls&lt;hr&gt;+ load_raw(): list&lt;br&gt;+ save_raw(records): void&lt;br&gt;+ load(): list&lt;br&gt;+ save(items): void" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="1190" width="280" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="exportImport" value="&lt;b&gt;ExportImport&lt;/b&gt;&lt;hr&gt;+ to_dataframe(records): DataFrame&lt;br&gt;+ to_csv_bytes(records): bytes&lt;br&gt;+ to_excel_bytes(records): bytes&lt;br&gt;+ to_pdf_bytes(records, title): bytes&lt;br&gt;+ read_uploaded_file(file): list" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="380" y="1190" width="300" height="155" as="geometry" />
+        </mxCell>
+
+        <mxCell id="noteLaporan" value="Catatan: class Laporan pada diagram lama diganti menjadi ReportService karena kode tidak memiliki model Laporan." style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="790" width="330" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="noteJadwal" value="Catatan: JadwalRuangan ada sebagai model, tetapi belum dipakai oleh storage/service utama." style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="1500" y="720" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="noteRelasiUml" value="Keterangan relasi UML: garis biasa = Association berbasis id_*; service ke JsonStorage = Aggregation karena service menyimpan referensi storage; Composition murni belum diterapkan pada domain model karena objek saling direferensikan lewat ID, bukan dimiliki sebagai atribut object." style="shape=note;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;align=left;spacingLeft=8;" vertex="1" parent="1">
+          <mxGeometry x="720" y="1300" width="720" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="eBaseUser" style="endArrow=block;endFill=0;html=1;strokeWidth=1.5;" edge="1" parent="1" source="user" target="baseModel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBaseKategori" style="endArrow=block;endFill=0;html=1;strokeWidth=1.5;" edge="1" parent="1" source="kategoriBuku" target="baseModel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBaseBuku" style="endArrow=block;endFill=0;html=1;strokeWidth=1.5;" edge="1" parent="1" source="buku" target="baseModel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBaseRuangan" style="endArrow=block;endFill=0;html=1;strokeWidth=1.5;" edge="1" parent="1" source="ruangan" target="baseModel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBaseJadwal" style="endArrow=block;endFill=0;html=1;strokeWidth=1.5;" edge="1" parent="1" source="jadwalRuangan" target="baseModel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBaseTransaksi" style="endArrow=block;endFill=0;html=1;strokeWidth=1.5;" edge="1" parent="1" source="transaksiBase" target="baseModel">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="eAnggotaUser" style="endArrow=block;endFill=0;html=1;strokeWidth=1.5;" edge="1" parent="1" source="anggota" target="user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eAdminUser" style="endArrow=block;endFill=0;html=1;strokeWidth=1.5;" edge="1" parent="1" source="admin" target="user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="eBukuResource" style="endArrow=block;endFill=0;html=1;dashed=1;strokeWidth=1.5;" edge="1" parent="1" source="buku" target="libraryResource">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eRuanganResource" style="endArrow=block;endFill=0;html=1;dashed=1;strokeWidth=1.5;" edge="1" parent="1" source="ruangan" target="libraryResource">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ePinjamTransaksi" style="endArrow=block;endFill=0;html=1;strokeWidth=1.5;" edge="1" parent="1" source="peminjamanBuku" target="transaksiBase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eAntrianTransaksi" style="endArrow=block;endFill=0;html=1;strokeWidth=1.5;" edge="1" parent="1" source="antrianBuku" target="transaksiBase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eReservasiTransaksi" style="endArrow=block;endFill=0;html=1;strokeWidth=1.5;" edge="1" parent="1" source="reservasiRuangan" target="transaksiBase">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="eKategoriBuku" value="1          0..*" style="endArrow=none;html=1;strokeWidth=1.25;" edge="1" parent="1" source="kategoriBuku" target="buku">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eRuanganJadwal" value="1          0..*" style="endArrow=none;html=1;strokeWidth=1.25;" edge="1" parent="1" source="ruangan" target="jadwalRuangan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eAnggotaPinjam" value="1          0..*" style="endArrow=none;html=1;strokeWidth=1.25;" edge="1" parent="1" source="anggota" target="peminjamanBuku">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBukuPinjam" value="1          0..*" style="endArrow=none;html=1;strokeWidth=1.25;" edge="1" parent="1" source="buku" target="peminjamanBuku">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eAnggotaAntrian" value="1          0..*" style="endArrow=none;html=1;strokeWidth=1.25;" edge="1" parent="1" source="anggota" target="antrianBuku">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eBukuAntrian" value="1          0..*" style="endArrow=none;html=1;strokeWidth=1.25;" edge="1" parent="1" source="buku" target="antrianBuku">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eAnggotaReservasi" value="1          0..*" style="endArrow=none;html=1;strokeWidth=1.25;" edge="1" parent="1" source="anggota" target="reservasiRuangan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eRuanganReservasi" value="1          0..*" style="endArrow=none;html=1;strokeWidth=1.25;" edge="1" parent="1" source="ruangan" target="reservasiRuangan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="dAuthUser" value="uses" style="endArrow=open;html=1;dashed=1;strokeColor=#d79b00;" edge="1" parent="1" source="authService" target="user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dBukuService" value="uses" style="endArrow=open;html=1;dashed=1;strokeColor=#d79b00;" edge="1" parent="1" source="bukuService" target="buku">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dRuanganService" value="uses" style="endArrow=open;html=1;dashed=1;strokeColor=#d79b00;" edge="1" parent="1" source="ruanganService" target="ruangan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dPinjamService" value="uses" style="endArrow=open;html=1;dashed=1;strokeColor=#d79b00;" edge="1" parent="1" source="peminjamanService" target="peminjamanBuku">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dReservasiService" value="uses" style="endArrow=open;html=1;dashed=1;strokeColor=#d79b00;" edge="1" parent="1" source="reservasiService" target="reservasiRuangan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dReportJson" value="uses" style="endArrow=open;html=1;dashed=1;strokeColor=#d79b00;" edge="1" parent="1" source="reportService" target="jsonStorage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dServicesJson1" value="uses" style="endArrow=open;html=1;dashed=1;strokeColor=#666666;" edge="1" parent="1" source="authService" target="jsonStorage">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,72 @@
+[
+    {
+        "id_peminjaman_buku": "PB001",
+        "id_buku": "BK001",
+        "id_anggota": "AGT001",
+        "tanggal_pinjam": "2026-07-04",
+        "tanggal_kembali": "2026-07-18",
+        "status_peminjaman": "Dikembalikan",
+        "denda": 0.0,
+        "tanggal_dikembalikan": "2026-07-04"
+    },
+    {
+        "id_peminjaman_buku": "PB002",
+        "id_buku": "BK001",
+        "id_anggota": "AGT001",
+        "tanggal_pinjam": "2026-07-04",
+        "tanggal_kembali": "2026-07-18",
+        "status_peminjaman": "Dikembalikan",
+        "denda": 0.0,
+        "tanggal_dikembalikan": "2026-07-04"
+    },
+    {
+        "id_peminjaman_buku": "PB003",
+        "id_buku": "BK001",
+        "id_anggota": "AGT001",
+        "tanggal_pinjam": "2026-07-05",
+        "tanggal_kembali": "2026-07-19",
+        "status_peminjaman": "Dikembalikan",
+        "denda": 0.0,
+        "tanggal_dikembalikan": "2026-07-05"
+    },
+    {
+        "id_peminjaman_buku": "PB004",
+        "id_buku": "BK002",
+        "id_anggota": "AGT001",
+        "tanggal_pinjam": "2026-07-05",
+        "tanggal_kembali": "2026-07-19",
+        "status_peminjaman": "Dikembalikan",
+        "denda": 0.0,
+        "tanggal_dikembalikan": "2026-07-05"
+    },
+    {
+        "id_peminjaman_buku": "PB005",
+        "id_buku": "BK001",
+        "id_anggota": "AGT001",
+        "tanggal_pinjam": "2026-07-06",
+        "tanggal_kembali": "2026-07-20",
+        "status_peminjaman": "Dikembalikan",
+        "denda": 0.0,
+        "tanggal_dikembalikan": "2026-07-06"
+    },
+    {
+        "id_peminjaman_buku": "PB006",
+        "id_buku": "BK001",
+        "id_anggota": "AGT001",
+        "tanggal_pinjam": "2026-07-08",
+        "tanggal_kembali": "2026-07-22",
+        "status_peminjaman": "Dipinjam",
+        "denda": 0.0,
+        "tanggal_dikembalikan": ""
+    },
+    {
+        "id_peminjaman_buku": "PB007",
+        "id_buku": "BK002",
+        "id_anggota": "AGT002",
+        "tanggal_pinjam": "2026-07-08",
+        "tanggal_kembali": "2026-07-22",
+        "status_peminjaman": "Dipinjam",
+        "denda": 0.0,
+        "tanggal_dikembalikan": ""
+    }
+]

@@ -1,0 +1,35 @@
+[
+    {
+        "id_buku": "BK001",
+        "judul": "Atomic Habits",
+        "penulis": "James Clear",
+        "penerbit": "Gramedia Pustaka Utama",
+        "tahun_terbit": 2019,
+        "stok": 3,
+        "kategori_id": "KAT003",
+        "cover_buku": "assets/covers/athom.jpg",
+        "link_pdf": "assets/pdfs/atomic_habits.pdf"
+    },
+    {
+        "id_buku": "BK002",
+        "judul": "Rich Dad Poor Dad",
+        "penulis": "Robert T. Kiyosaki",
+        "penerbit": "Gramedia Pustaka Utama",
+        "tahun_terbit": 2017,
+        "stok": 3,
+        "kategori_id": "KAT003",
+        "cover_buku": "assets/covers/rdpd.jpg",
+        "link_pdf": "assets/pdfs/rich-dad-poor-dad.pdf"
+    },
+    {
+        "id_buku": "BK003",
+        "judul": "Sapiens: Riwayat Singkat Umat Manusia",
+        "penulis": "Yuval Noah Harari",
+        "penerbit": "Kepustakaan Populer Gramedia (KPG)",
+        "tahun_terbit": 2015,
+        "stok": 2,
+        "kategori_id": "KAT003",
+        "cover_buku": "assets/covers/sapiens.jpg",
+        "link_pdf": "assets/pdfs/sapiens.pdf"
+    }
+]

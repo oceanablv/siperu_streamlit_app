@@ -1,0 +1,26 @@
+[
+    {
+        "id_ruangan": "RG001",
+        "nama_ruangan": "Ruang Diskusi A",
+        "kapasitas": 6,
+        "lokasi": "Lantai 2",
+        "fasilitas": "AC, Whiteboard, Wi-Fi",
+        "status_ruangan": "Tersedia"
+    },
+    {
+        "id_ruangan": "RG002",
+        "nama_ruangan": "Ruang Diskusi B",
+        "kapasitas": 8,
+        "lokasi": "Lantai 2",
+        "fasilitas": "AC, TV, Wi-Fi",
+        "status_ruangan": "Tersedia"
+    },
+    {
+        "id_ruangan": "RG003",
+        "nama_ruangan": "Ruang Seminar Mini",
+        "kapasitas": 20,
+        "lokasi": "Lantai 3",
+        "fasilitas": "Projector, Sound System, Wi-Fi",
+        "status_ruangan": "Tersedia"
+    }
+]

@@ -1,0 +1,52 @@
+[
+    {
+        "id_reservasi": "RS001",
+        "id_ruangan": "RG002",
+        "id_anggota": "AGT001",
+        "tanggal_reservasi": "2026-07-04",
+        "jam_mulai": "08:00",
+        "jam_selesai": "12:00",
+        "keperluan": "Belajar",
+        "status_reservasi": "Dikonfirmasi"
+    },
+    {
+        "id_reservasi": "RS002",
+        "id_ruangan": "RG002",
+        "id_anggota": "AGT001",
+        "tanggal_reservasi": "2026-07-08",
+        "jam_mulai": "09:00",
+        "jam_selesai": "11:00",
+        "keperluan": "Belajar",
+        "status_reservasi": "Dibatalkan"
+    },
+    {
+        "id_reservasi": "RS003",
+        "id_ruangan": "RG001",
+        "id_anggota": "AGT001",
+        "tanggal_reservasi": "2026-07-08",
+        "jam_mulai": "09:00",
+        "jam_selesai": "11:00",
+        "keperluan": "belajar",
+        "status_reservasi": "Dibatalkan"
+    },
+    {
+        "id_reservasi": "RS004",
+        "id_ruangan": "RG001",
+        "id_anggota": "AGT001",
+        "tanggal_reservasi": "2026-07-08",
+        "jam_mulai": "09:00",
+        "jam_selesai": "11:00",
+        "keperluan": "Belajar RPL",
+        "status_reservasi": "Dikonfirmasi"
+    },
+    {
+        "id_reservasi": "RS005",
+        "id_ruangan": "RG002",
+        "id_anggota": "AGT001",
+        "tanggal_reservasi": "2026-07-08",
+        "jam_mulai": "16:30",
+        "jam_selesai": "18:30",
+        "keperluan": "Ujian PBO",
+        "status_reservasi": "Dikonfirmasi"
+    }
+]

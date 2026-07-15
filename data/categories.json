@@ -1,0 +1,14 @@
+[
+    {
+        "id_kategori": "KAT001",
+        "nama_kategori": "Teknologi Informasi"
+    },
+    {
+        "id_kategori": "KAT002",
+        "nama_kategori": "Manajemen"
+    },
+    {
+        "id_kategori": "KAT003",
+        "nama_kategori": "Umum"
+    }
+]

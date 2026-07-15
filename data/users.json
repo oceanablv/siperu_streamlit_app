@@ -1,0 +1,38 @@
+[
+    {
+        "id_user": "ADM001",
+        "nama": "Admin SIPERU",
+        "username": "admin",
+        "email": "admin@siperu.local",
+        "password_hash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+        "role": "admin",
+        "nip": "19870001",
+        "jabatan": "Admin Perpustakaan"
+    },
+    {
+        "id_user": "AGT001",
+        "nama": "Anggota Demo",
+        "username": "anggota",
+        "email": "anggota@siperu.local",
+        "password_hash": "59a3b2e9de40b220ea27817ac85b2ac62c26473df75f7029611077b21bcf3ef9",
+        "role": "anggota",
+        "nim_nidn": "1242002059",
+        "prodi": "Sistem Informasi",
+        "no_telp": "081234567890",
+        "status_aktif": true,
+        "kuota_pinjam": 3
+    },
+    {
+        "id_user": "AGT002",
+        "nama": "Irfan Saleh",
+        "username": "Irfnslh_",
+        "email": "1242002059@student.bakrie.ac.id",
+        "password_hash": "932f3c1b56257ce8539ac269d7aab42550dacf8818d075f0bdf1990562aae3ef",
+        "role": "anggota",
+        "nim_nidn": "1242002059",
+        "prodi": "Sistem Informasi",
+        "no_telp": "085770144370",
+        "status_aktif": true,
+        "kuota_pinjam": 3
+    }
+]
